@@ -14,15 +14,15 @@ createApp({
 				.get("https://flynn.boolean.careers/exercises/api/random/mail")
 				.then((res) => {
 					//console.log(res.data.response);
-          const email = res.data.response
-          this.emailList.push(email)
+					const email = res.data.response;
+					this.emailList.push(email);
 				});
 		},
 	},
-  mounted(){
-    for(let i = 0; i < 10; i++) {
-      this.fetchEmail()
-    }
-    console.log(this.emailList)
-  }
+	mounted() {
+		for (let i = 0; i < 10; i++) {
+			this.fetchEmail();
+		}
+		//console.log(this.emailList)
+	},
 }).mount("#app");
